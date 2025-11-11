@@ -71,7 +71,7 @@ function updateView() {
 function caughtPokemonView(){
   app.innerHTML = /*HTML*/`
   <div class="caughtContainer">
-    <h1>Du fanget ${playerPokemon[playerPokemon.length - 1].name}</h1>
+    <h1>Du fanget ${player.playerPokemon[player.playerPokemon.length - 1].name}</h1>
     <div class="buttonContainer">
               <button onclick="updateView()">Finn en annen</button>
               <button onclick="showPokemon()">Vis dine pokemon</button>
@@ -81,12 +81,12 @@ function caughtPokemonView(){
 }
 
 function catchPokemon(){
-  playerPokemon.push(randomPokemon);
+  player.playerPokemon.push(randomPokemon);
   caughtPokemonView();
 }
 
 function showPokemon(){
-  console.log(playerPokemon);
+  console.log(player.playerPokemon);
 }
 
 function getRandomPokemon(){
