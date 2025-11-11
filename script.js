@@ -30,10 +30,12 @@ let drowzee = {
 
 let possiblePokemon = [pikachu, bulbasaur, oranguru, drowzee];
 let randomPokemon = null;
-
-let playerName = "Bjarne";
-let playerImage = "/Images/pokemonTrainerIdle.png";
-let playerPokemon = [];
+    
+let player = { 
+ playerName: "Bjarne",
+ playerImage: "Images/pokemonTrainerIdle.png",
+ playerPokemon: [],
+};
 
 let app = document.getElementById("app");
 
@@ -51,8 +53,8 @@ function updateView() {
     
     <div class="bottomScreen">
         <div class="player">
-            <img src="${playerImage}">
-            <div>${playerName}</div>
+            <img src="${player.playerImage}">    <!-- Glemte og legge til hvem object den hørte til. "player"-->
+            <div>${player.playerName}</div>   <!-- så la til "player." i linje 56 og 57 løste problemet mitt =) -->
         </div>
 
         <div class="buttonContainer">
